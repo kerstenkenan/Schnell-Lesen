@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Benutzer" representedClassName=".Benutzer" syncable="YES">
+        <attribute name="ausgewaehlt" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="datum" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ergebnis" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Ergebnis" inverseName="benutzer" inverseEntity="Ergebnis" syncable="YES"/>
+    </entity>
+    <entity name="Ergebnis" representedClassName=".Ergebnis" syncable="YES">
+        <attribute name="datum" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="minuten" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="punkte" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="runden" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sectionIdentifier" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
+        <attribute name="words" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="benutzer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Benutzer" inverseName="ergebnis" inverseEntity="Benutzer" syncable="YES"/>
+    </entity>
+    <entity name="Fehler" representedClassName=".Fehler" syncable="YES">
+        <attribute name="datum" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="deviceName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="erkanntesWort" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wort" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Benutzer" positionX="-18" positionY="27" width="128" height="105"/>
+        <element name="Ergebnis" positionX="-45" positionY="0" width="128" height="150"/>
+        <element name="Fehler" positionX="9" positionY="54" width="128" height="105"/>
+    </elements>
+</model>

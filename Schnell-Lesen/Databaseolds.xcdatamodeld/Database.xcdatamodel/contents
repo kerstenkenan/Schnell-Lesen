@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Benutzer" representedClassName=".Benutzer" syncable="YES">
+        <attribute name="ausgewaehlt" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="datum" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ergebnis" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Ergebnis" inverseName="benutzer" inverseEntity="Ergebnis" syncable="YES"/>
+    </entity>
+    <entity name="Ergebnis" representedClassName=".Ergebnis" syncable="YES">
+        <attribute name="datum" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="minuten" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="punkte" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="runden" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sectionIdentifier" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
+        <relationship name="benutzer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Benutzer" inverseName="ergebnis" inverseEntity="Benutzer" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Benutzer" positionX="-287.18359375" positionY="-41.32421875" width="128" height="105"/>
+        <element name="Ergebnis" positionX="-54" positionY="-9" width="128" height="135"/>
+    </elements>
+</model>
