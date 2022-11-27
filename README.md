@@ -1,4 +1,4 @@
-# Schnell-Lesen on AppStore: https://apps.apple.com/de/app/schnell-lesen/id1464675994
+Schnell-Lesen on AppStore: https://apps.apple.com/de/app/schnell-lesen/id1464675994
 
 The app is intended to help improve the reading skills of school children. She does this by asking for basic vocabulary. Right at the beginning you can choose in the settings whether the entire basic vocabulary should be queried, or just the words of one or more letters of the alphabet.
 
